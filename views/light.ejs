@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Api | Ali Reza</title>
+    <link rel="stylesheet" href="/lightmode.css">
+    <link rel="stylesheet" href="/darkmode.css">
+    <link rel="icon" href="https://www.karenneverland.com/wp-content/uploads/2016/05/Sun-and-moon-yin-yang-circle.png">
+</head>
+<body class="light">
+    <!-- Loading -->
+    <!-- <div id="loading">
+
+    </div> -->
+
+    <button>Dark and Light</button>
+    <header>
+        <% if (data.cod !== '404') { %>
+            <!-- ==== Container 1 ==== -->
+            <div id="container__1">
+                <h1><%= data.name %>, <%= data.sys.country %>  </h1>
+                <img src="<%= randImg() %> " alt="">
+                <h2><%= Math.floor(data.main.temp - 273.15) %>&#176 C </h2>
+            </div>
+
+            <!-- ==== Container 2 ==== -->
+            <div id="container__2">
+                <form action="/L-weatherapi" method="POST">
+                    <input type="text" name="search" placeholder="Search" autocomplete="off">
+                </form>
+
+                <!-- ==== items ==== -->
+                <div id="container_items">
+                    <div class="items item1">
+                        <div id="img">
+                            <img src="img/image/1.png" alt="">
+                        </div>
+                        <div id="information">
+                            <p>Humidity</p>
+                            <h1><%= data.main.humidity %> </h1>
+                            <p>%</p>
+                        </div>
+                    </div>
+                    <div class="items item2">
+                        <div id="img">
+                            <img src="img/image/2.png" alt="">
+                        </div>
+                        <div id="information">
+                            <p>Wind speed</p>
+                            <h1><%= data.wind.speed %> </h1>
+                            <p>m/s</p>
+                        </div>
+                    </div>
+                    <div class="items item3">
+                        <div id="img">
+                            <img src="img/image/3.png" alt="">
+                        </div>
+                        <div id="information">
+                            <p>Wind direction</p>
+                            <h1><%= data.wind.deg %> </h1>
+                            <p>deg</p>
+                        </div>
+                    </div>
+                    <div class="items item4">
+                        <div id="img">
+                            <img src="img/image/4.png" alt="">
+                        </div>
+                        <div id="information">
+                            <p>Visibility</p>
+                            <h1><%= data.visibility / 1000 %>.0 </h1>
+                            <p>km</p>
+                        </div>
+                    </div>
+                    <div class="items item5">
+                        <div id="img">
+                            <img src="img/image/5.png" alt="">
+                        </div>
+                        <div id="information">
+                            <p>Sunrise</p>
+                            <h1><%= convertTimestamp(data.sys.sunrise) %> </h1>
+                        </div>
+                    </div>
+                    <div class="items item6">
+                        <div id="img">
+                            <img src="img/image/6.png" alt="">
+                        </div>
+                        <div id="information">
+                            <p>Sunset</p>
+                            <h1><%= convertTimestamp(data.sys.sunset) %></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } else {%>
+            <div id="error">
+                <h1>OOPS!</h1>
+                <code>City not found</code>
+                <form action="/L-weatherapi" method="POST">
+                    <input type="text" name="search" placeholder="Search again" autocomplete="off">
+                </form>
+            </div>
+        <% } %> 
+    </header>
+
+
+
+
+    <script>
+        const body = document.body;
+        const button = document.querySelector('button');
+
+        button.addEventListener('click', e => {
+            body.classList.toggle('dark');
+        })
+    </script>
+</body>
+</html>
