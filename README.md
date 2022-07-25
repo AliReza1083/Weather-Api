@@ -5,3 +5,4 @@
 This is the website where You can check the weather of the most Cities.
 
 ### Light and Dark Mode
+   You can see the Website in dark mode and also in light mode.
