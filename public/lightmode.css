@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.light > a {
+    font-size: 13px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #f2f2f2;
+    color: black;
+    padding: .5em 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.light {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    padding: 4em 10em; 
+    font-family: 'Varela Round', sans-serif;
+    color: black;
+}
+
+.light > button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    color: black;
+    padding: .5em 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.light > button:active {
+    transform: scale(.9);
+}
+
+.light header {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 1em;
+    box-shadow: 0 5px 20px 10px rgb(0 0 0 / 13%) !important;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    animation: headerIntro .5s;
+}
+@keyframes headerIntro {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.light #container__1 {
+    height: 100%;
+    background-color: #f2f2f2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1em;
+    padding: 0 2em;
+}
+.light #container__1 img {
+    width: 100%;
+}
+.light #container__1 h2 {
+    font-size: 3em;
+}
+
+.light #container__2 {
+    height: 100%;
+    width: 100%;
+    padding: 1em;
+}
+.light #container__2 input, .light #error input {
+    width: 100%;
+    padding: .5em;
+    background-color: #f2f2f2;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    color: black;
+    border-radius: .5em;
+    transition: .3s;
+}
+.light #container__2 input:focus, .light #error input:focus {
+    background-color: #fff;
+}
+
+.light #container_items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 150px;
+    gap: 1em;
+    margin: 1em 0;
+}
+
+.light .items {
+    background-color: #fff;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden;
+}
+.light .items:hover {
+    background-color: #f2f2f2;
+}
+.light #img {
+    width: 100%;
+}
+.light #img img {
+    width: 100%;
+}
+.light #information {
+    width: 100%;
+    padding: 1em;
+    text-align: right;
+    align-self: flex-start;
+}
+.light #information h2 {
+    font-size: 16px;
+}
+
+#error {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#error h1 {
+    font-size: 5em;
+}
+#error code {
+    margin: 1em 0 1.5em 0;
+}
+#error form {
+    width: 80%;
+}
+
+
+@media (max-width: 1200px) {
+    .light {
+        padding: 4em 1em;
+    }
+    .light #container_items {
+        grid-auto-rows: 1fr ;
+    }
+}
+@media (max-width: 992px) {
+    .light body {
+        height: auto;
+        padding: 2em 10em;
+    }
+    .light header {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .light #container__1 {
+        width: 100%;
+        gap: 0;
+        padding: 1em 0;
+    }
+}
+
+@media(max-width: 768px) {
+    .light {
+        padding: 2em 7em;
+    }
+    .light #container_items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .light {
+        padding: 0;
+    }
+    .light header {
+        border-radius: 0;
+    }
+    .light #container_items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .light #img {
+        padding: 2em;
+    }
+}
