@@ -8,13 +8,13 @@
 <h2><a href="https://github.com/AliReza1083/Weather-Api">Weather API</a></h2>
 This is the website where You can check the weather of the most Cities.
 
-### Light and Dark Mode
+<h3>Light and Dark Mode</h3>
 You can see the Website in dark mode and also in light mode.
 
 &nbsp;&nbsp;<img src="image/Weather API.png" width="100%" border-radius="1em" >
 <p align="right">(<a href="#top">Go top</a>)</p>
 
-### The tools that I used:
+<h3>The tools that I used:</h3>
 - ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 - ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 - ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
