@@ -6,4 +6,5 @@ This is the website where You can check the weather of the most Cities.
 
 ### Light and Dark Mode
 You can see the Website in dark mode and also in light mode.
-<img src="image/Weather API.png" width="100%" border-radius="1em">
+<br>
+<img src="image/Weather API.png" width="100%" border-radius="1em" >
